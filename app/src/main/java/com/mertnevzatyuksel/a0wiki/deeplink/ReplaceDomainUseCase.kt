@@ -5,6 +5,8 @@ import android.net.Uri
 class ReplaceDomainUseCase {
 
     fun replaceDomain(oldURL: Uri, newDomainWithoutSubdomain: String): Uri {
-        TODO()
+        val oldAuthority = requireNotNull(oldURL.authority ?: oldURL.host)
+        val newAuthority = oldAuthority.replace("wikipedia.org", newDomainWithoutSubdomain)
+        return oldURL.buildUpon().authority(newAuthority).build()
     }
 }
