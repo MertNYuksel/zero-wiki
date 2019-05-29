@@ -1,7 +1,8 @@
-package com.mertnevzatyuksel.a0wiki
+package com.mertnevzatyuksel.a0wiki.deeplink
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mertnevzatyuksel.a0wiki.R
 
 class DeeplinkActivity : AppCompatActivity() {
 
