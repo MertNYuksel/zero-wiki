@@ -31,6 +31,8 @@ class DeeplinkActivity : AppCompatActivity() {
         }
             .onFailure { startWebViewActivity(replacedDomain.toString()) }
             .onSuccess { logSuccess() }
+
+        finish()
     }
 
     private fun logSuccess() {
