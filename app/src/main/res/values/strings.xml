@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">0Wiki</string>
+    <string name="header">Sıkça Sorulan Sorular</string>
+
+    <string name="question_now_what">Şimdi ne olacak?</string>
+    <string name="answer_now_what">"Eğer bir wikipedia.org linkine tıklarsan, 0Wiki uygulaması araya girip bağlantıyı wikipedia\'yı mirror eden bir sitede (bknz: https://en.wikipedia.org/wiki/Mirror_website) açmaya çalışacak. Böylelikle Wikipedia.org\'a engelsiz bir şekilde girebileceksin. <bold> Her zaman Wiki0\'da aç demeyi unutma</bold>"</string>
+
+    <string name="question_no_ads">Reklamsız demiştin, her yerde reklam var :(</string>
+    <string name="answer_no_ads">Wiki0 uygulaması Google Play\'e (bknz: https://tr.wikipedia.org/wiki/Google_Play) ilk yüklendiği zaman zaman mirror site olarak en.wikipedi0.org\'a yönlendirme yapıyordum. Mirror sitenin reklam politikası veya elimde olmayan nedenlerden ötürü yönlendirme yapmış olduğum site değişmiş olabilir. Gördüğün reklamların nedeni bu olabilir. </string>
+
+    <string name="question_always_misclick">Yanlışlıkla "Her Zaman Chrome'da Aç'ı Seçtim</string>
+    <string name="answer_always_misclick">- Bunu her zaman düzeltebilirsin. Uygulama Ayarlarına gidip desteklenen linkleri bu uygulamada aç demen gerekiyor.</string>
+    <string name="app_settings">Uygulama Ayarları</string>
+
+    <string name="question_address_bar">Chrome\'daki adres çubuğuna wikipedia.org yazdım</string>
+    <string name="answer_addreess_bar">Üzgünüm, Chrome adres çubuğuna yazılan istekleri kendi içerisinde kontrol eder. Bu nedenle Wiki0 uygulaması araya giremez. Bir wikipedia (https://en.wikipedia.org/) linkine tıkladığın takdirde Wiki0 uygulaması araya girecektir. </string>
+
+    <string name="question_different_browser">Chrome\'dan farklı bir tarayıcı kullanıyorum</string>
+    <string name="answer_different_browser">Üzgünüm, eğer kullandığın tarayıcı tıkladığın diğer uygulamalar göndermeden önce kendi içerisinde açmaya çalışıyorsa Wiki0 uygulaması araya giremez. Erişmek istediğin wikipedia.org linkini aşağıya yapıştırırsan buradan yönlenmeyi deneyebilirsin.</string>
+    <string name="access">Eriş</string>
+
+    <string name="question_mirror_down">Yönlenme gerçekleşiyor fakat herhangi mirror eden site açılmıyor.</string>
+    <string name="answer_mirror_down">Uygulamanın yönlendirdiği site bazı sorunlar yaşıyor olabilir. Bu sitelerin benimle bir ilgisi yok. Farklı bir mirror deneyebilirsin.</string>
+    <string name="default_mirror">Default Mirror:</string>
+    <string name="alternative_mirrors">Alternatif Mirrorlar:</string>
+    <string name="suggest_a_mirror">Mirror Öner</string>
+
+    <string name="question_mail">Benim de diyeceklerim var!</string>
+    <string name="answer_mail">Bize yazın.</string>
+
+    <string name="question_phishing">Kullandığım antivirüs uygulaması bu uygulamada phishing yapıldığını söylüyor.</string>
+    <string name="answer_phishing">Elbette bu uygulama phishing (bknz: https://en.wikipedia.org/wiki/Phishing) yapmıyor ama çalışma şekli yani araya girip başka bir siteye yönlendirmesi phishing saldırılarına çok benziyor. Yani kısacası antivirüs uygulamanız yanılmakta çok haklı. Bu uygulamanın herhangi bir mirror ile ilişkisi yoktur. Eğer uygulamanın yönlendirdiği mirror web sitenin Wikipedia hesabınızın bilgilerini ele geçirdiğini düşünüyorsanız lütfen bize yazın ve ivedilikle harekete geçelim.
+    \n\nAyrıca bakınız:
+    https://en.wikipedi0.org/wiki/False_positives_and_false_negatives#False_positive_error
+    </string>
+    <string name="report_mirror">Mirror Şikayet Et</string>
 </resources>
