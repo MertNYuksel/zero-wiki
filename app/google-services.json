@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "754657070452",
+    "firebase_url": "https://zero-wik.firebaseio.com",
+    "project_id": "zero-wik",
+    "storage_bucket": "zero-wik.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754657070452:android:67e5480bb935c050",
+        "android_client_info": {
+          "package_name": "com.mertnevzatyuksel.a0wiki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754657070452-2d48ihr35eafpj4r35l3pm5b5li9kup5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mertnevzatyuksel.a0wiki",
+            "certificate_hash": "f079187d0cbf4e838464349f0be103adfafda5bf"
+          }
+        },
+        {
+          "client_id": "754657070452-4if0eec8qm860dg9j7nb45t181un4a83.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_ECbWzGRfL6p1r7XTkbEToXZTIhkifzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754657070452-4if0eec8qm860dg9j7nb45t181un4a83.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
