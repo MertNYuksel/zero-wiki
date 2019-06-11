@@ -6,16 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.browser.customtabs.CustomTabsIntent
 import com.mertnevzatyuksel.a0wiki.R
+import com.mertnevzatyuksel.a0wiki.remoteconfig.RemoteConfigWrapper
 
 class DeeplinkActivity : AppCompatActivity() {
 
-    val replaceDomainUseCase by lazy(LazyThreadSafetyMode.NONE) {
-        ReplaceDomainUseCase()
-    }
-
-    val webBrowserIntentResolver by lazy(LazyThreadSafetyMode.NONE) {
-        WebBrowserIntentResolver()
-    }
+    val replaceDomainUseCase = ReplaceDomainUseCase()
+    val webBrowserIntentResolver = WebBrowserIntentResolver()
+    val remoteConfigWrapper = RemoteConfigWrapper()
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
@@ -30,17 +27,18 @@ class DeeplinkActivity : AppCompatActivity() {
 
     private fun handleDeeplink(intent: Intent?) {
         val intentData = intent?.data ?: return
-        val newDomain = "wikipedi0.org"
-        val replacedDomain = replaceDomainUseCase.replaceDomain(intentData, newDomain)
-
-        runCatching {
-            webBrowserIntentResolver.getWebBrowserIntent(this)?.apply {
-                data = replacedDomain
-            }?.let(::startActivity)
-        }.onFailure { onBrowserIntentFailed(replacedDomain) }
+        val replacedDomain = replaceDomainUseCase.replaceDomain(intentData, remoteConfigWrapper.getTargetDomain())
+        runCatching { startBrowser(replacedDomain) }
+            .onFailure { onBrowserIntentFailed(replacedDomain) }
             .onSuccess { onBrowserIntentSucceed() }
 
         finish()
+    }
+
+    private fun startBrowser(replacedDomain: Uri) {
+        webBrowserIntentResolver.getWebBrowserIntent(this)
+            ?.also { it.data = replacedDomain }
+            ?.let(::startActivity)
     }
 
     private fun onBrowserIntentSucceed() {
@@ -60,7 +58,7 @@ class DeeplinkActivity : AppCompatActivity() {
     private fun logFailedBrowserIntent() {
 
     }
-    
+
     private fun startCustomTabs(url: Uri) {
         CustomTabsIntent.Builder().build().launchUrl(this, url);
     }
