@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,6 +29,7 @@
             android:background="#2054595d" />
 
         <LinearLayout
+            android:id="@+id/linearLayoutNowWhat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -63,6 +63,7 @@
             android:background="#2054595d" />
 
         <FrameLayout
+            android:id="@+id/frameLayoutNowWhatAnswer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -73,6 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="@string/answer_now_what" />
@@ -80,11 +83,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_gravity="bottom"
                 android:background="#2054595d" />
         </FrameLayout>
 
 
         <LinearLayout
+            android:id="@+id/linearLayoutNoAds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -118,6 +123,7 @@
             android:background="#2054595d" />
 
         <FrameLayout
+            android:id="@+id/frameLayoutNoAdsAnswer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -128,6 +134,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="@string/answer_no_ads" />
@@ -135,11 +143,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_gravity="bottom"
                 android:background="#2054595d" />
         </FrameLayout>
 
 
         <LinearLayout
+            android:id="@+id/linearLayoutAlwaysMisclick"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -173,7 +183,8 @@
             android:background="#2054595d" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/linearLayoutAlwaysMisclickAnswer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:orientation="vertical"
@@ -184,6 +195,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="@string/answer_always_misclick" />
@@ -204,6 +217,7 @@
 
 
         <LinearLayout
+            android:id="@+id/linearLayoutAddressBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -237,6 +251,7 @@
             android:background="#2054595d" />
 
         <FrameLayout
+            android:id="@+id/frameLayoutAddressBarAnswer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -247,6 +262,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="@string/answer_addreess_bar" />
@@ -254,11 +271,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_gravity="bottom"
                 android:background="#2054595d" />
 
         </FrameLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayoutDifferentBrowser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -292,6 +311,7 @@
             android:background="#2054595d" />
 
         <LinearLayout
+            android:id="@+id/linearLayoutDifferentBrowserAnswer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -303,6 +323,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="@string/answer_different_browser" />
@@ -343,6 +365,7 @@
 
 
         <LinearLayout
+            android:id="@+id/linearLayoutMirrorDown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -376,20 +399,23 @@
             android:background="#2054595d" />
 
         <LinearLayout
+            android:id="@+id/linearLayoutMirrorDownAnswer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="12dp"
             android:orientation="vertical"
-            android:visibility="gone"
             android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:paddingEnd="16dp"
+            android:visibility="gone">
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:text="@string/answer_mirror_down" />
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -429,6 +455,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayoutMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -462,6 +489,7 @@
             android:background="#2054595d" />
 
         <FrameLayout
+            android:id="@+id/frameLayoutMailAnswer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="12dp"
@@ -473,16 +501,20 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:text="@string/answer_mail" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_gravity="bottom"
                 android:background="#2054595d" />
         </FrameLayout>
 
 
         <LinearLayout
+            android:id="@+id/linearLayoutPhishing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -516,6 +548,7 @@
             android:background="#2054595d" />
 
         <LinearLayout
+            android:id="@+id/linearLayoutPhishingAnswer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -529,6 +562,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="12dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:text="@string/answer_phishing" />
 
             <androidx.appcompat.widget.AppCompatButton
