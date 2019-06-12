@@ -4,10 +4,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
+import androidx.appcompat.widget.AppCompatImageView
 import kotlinx.android.synthetic.main.activity_main.frameLayoutAddressBarAnswer
 import kotlinx.android.synthetic.main.activity_main.frameLayoutMailAnswer
 import kotlinx.android.synthetic.main.activity_main.frameLayoutNoAdsAnswer
 import kotlinx.android.synthetic.main.activity_main.frameLayoutNowWhatAnswer
+import kotlinx.android.synthetic.main.activity_main.imageViewAddressBar
+import kotlinx.android.synthetic.main.activity_main.imageViewAlwaysMisclick
+import kotlinx.android.synthetic.main.activity_main.imageViewDifferentBrowser
+import kotlinx.android.synthetic.main.activity_main.imageViewMail
+import kotlinx.android.synthetic.main.activity_main.imageViewMirrorDown
+import kotlinx.android.synthetic.main.activity_main.imageViewNoAds
+import kotlinx.android.synthetic.main.activity_main.imageViewNowWhat
+import kotlinx.android.synthetic.main.activity_main.imageViewPhishing
 import kotlinx.android.synthetic.main.activity_main.linearLayoutAddressBar
 import kotlinx.android.synthetic.main.activity_main.linearLayoutAlwaysMisclick
 import kotlinx.android.synthetic.main.activity_main.linearLayoutAlwaysMisclickAnswer
@@ -38,7 +47,24 @@ class MainActivity : AppCompatActivity() {
             linearLayoutNowWhat to frameLayoutNowWhatAnswer
         )
 
-        val questionClickListener = View.OnClickListener { answerMap.get(it)?.toggleVisibility() }
+        val arrowMap = mapOf<View, AppCompatImageView>(
+            linearLayoutMirrorDown to imageViewMirrorDown,
+            linearLayoutAddressBar to imageViewAddressBar,
+            linearLayoutAlwaysMisclick to imageViewAlwaysMisclick,
+            linearLayoutDifferentBrowser to imageViewDifferentBrowser,
+            linearLayoutMail to imageViewMail,
+            linearLayoutNoAds to imageViewNoAds,
+            linearLayoutPhishing to imageViewPhishing,
+            linearLayoutNowWhat to imageViewNowWhat
+        )
+
+        val questionClickListener = View.OnClickListener {
+            questionView ->
+            answerMap.get(questionView)?.let { answerView ->
+                answerView.toggleVisibility()
+                arrowMap.get(questionView)?.setImageResource(getArrowDirectionFromViewVisibility(answerView.visibility))
+            }
+        }
 
         listOf<View>(
             linearLayoutMirrorDown,
@@ -51,6 +77,10 @@ class MainActivity : AppCompatActivity() {
             linearLayoutNowWhat)
             .forEach { it.setOnClickListener(questionClickListener) }
 
+    }
+
+    private fun getArrowDirectionFromViewVisibility(visibility: Int): Int {
+        return if (visibility == View.VISIBLE) R.drawable.ic_arrow_drop_up_black_24dp else R.drawable.ic_arrow_drop_down_black_24dp
     }
 }
 
